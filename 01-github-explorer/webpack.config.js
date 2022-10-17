@@ -1,5 +1,5 @@
 const path = require('path')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -11,11 +11,11 @@ module.exports = {
   devServer: {
     static: path.resolve(__dirname, 'public'),
   },
-  // // Plugins: [
-  // //   new HtmlWebpackPlugin({
-  // //     template: path.resolve(__dirname, 'public', 'index.html'),
-  // //   }),
-  // ],
+  Plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public', 'index.html'),
+    }),
+  ],
   module: {
     rules: [
       {
