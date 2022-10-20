@@ -1,26 +1,20 @@
 import { RepositoryItem } from './RepositoryItem'
 import '../style/repositories.scss'
-const repositories = [
-  {
-    name: 'Uniforme bonito',
-    description: 'Um lindo Repositório',
-    link: 'google.com',
-  },
-  {
-    name: 'Mario Roqueo',
-    description: 'Um lindo Repositório',
-    link: 'google.com',
-  },
-]
+import { useState, useEffect } from 'react'
 
 export function RepositoryList() {
+  const [repositories, setRepositories] = useState([])
+
+  useEffect(() => {
+    fetch('https://api.github.com/orgs/rocketseat/repos')
+      .then(response => response.json())
+      .then(data => setRepositories(data))
+  }, [])
+
   return (
     <section className="repository-list">
       <h1>LIsta de Repositórios</h1>
       <ul>
-        {repositories.map(repository => (
-          <RepositoryItem repository={repository} />
-        ))}
         <RepositoryItem />
         <RepositoryItem />
       </ul>
