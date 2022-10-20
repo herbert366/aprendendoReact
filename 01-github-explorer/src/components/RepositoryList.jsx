@@ -1,5 +1,5 @@
 import { RepositoryItem } from './RepositoryItem'
-const data = 'dado qualquer'
+import '../style/repositories.scss'
 const repositories = [
   {
     name: 'Uniforme bonito',
@@ -17,7 +17,6 @@ export function RepositoryList() {
   return (
     <section className="repository-list">
       <h1>LIsta de Repositórios</h1>
-      <h2>{data}</h2>
       <ul>
         {repositories.map(repository => (
           <RepositoryItem repository={repository} />
