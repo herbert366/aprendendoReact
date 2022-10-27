@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   --shape-secundaria: #29292E;
   --shape-terciária: #323238;
   --placeholder:#7C7C8A;
-  --text-base:#C4C4CC
+  --text-base:#C4C4CC;
   --text-title:#E1E1E6;
   --white:#FFFFFF;
 
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6, strong{
   font-weight: 700;
 }
 body{
-background: var(--white);
+background: var(--shape-principal);
 -webkit-font-smoothing: antialiased;
 }
 button{
