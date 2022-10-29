@@ -19,9 +19,6 @@ export function Summary() {
         acc.withdraws = Number(acc.withdraws)
         acc.withdraws += transaction.amount
         acc.total -= transaction.amount
-        console.log(acc.total)
-        console.log(typeof acc.withdraws)
-        console.log(transaction.amount)
       }
       return acc
     },
